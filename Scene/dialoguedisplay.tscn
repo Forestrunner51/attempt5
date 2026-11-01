@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://gy5bswmm4q68"]
+
+[ext_resource type="Script" uid="uid://gq545os6jcob" path="res://Scripts/DialogueDisplay.cs" id="1_47peg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47peg"]
+bg_color = Color(0.9438794, 0.3936343, 0.4346753, 1)
+
+[node name="DialogueDisplay" type="PanelContainer" unique_id=347827361]
+custom_minimum_size = Vector2(200, 200)
+custom_maximum_size = Vector2(200, 200)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_47peg")
+script = ExtResource("1_47peg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1106695273]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=838982988]
+layout_mode = 2
+text = "ugh"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=321651101]
+layout_mode = 2
