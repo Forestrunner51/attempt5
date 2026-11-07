@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://d18f05rna5whh"]
+
+[ext_resource type="Script" uid="uid://0uy0xyifae2k" path="res://Scripts/DialogueResource.gd" id="1_84hlq"]
+
+[resource]
+script = ExtResource("1_84hlq")
+json_data = "[
+      { \"id\": \"start\", \"speaker\": \"Guard\", \"text\": \"Halt! Who goes there?\" },
+      { \"speaker\": \"Guard\", \"text\": \"This is a restricted area. You must back off!\" },
+      { \"options\": [
+          { \"text\": \"I'm leaving.\", \"jump_to\": \"end\" },
+          { \"text\": \"I want to fight!\", \"callback\": \"start_combat\", \"jump_to\": null }
+        ]
+      },
+      { \"id\": \"end\", \"speaker\": \"Guard\", \"text\": \"Wise choice.\", \"jump_to\": null }
+    ]"
+metadata/_custom_type_script = "uid://0uy0xyifae2k"

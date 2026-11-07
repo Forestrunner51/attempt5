@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://gy5bswmm4q68"]
 
-[ext_resource type="Script" uid="uid://gq545os6jcob" path="res://Scripts/DialogueDisplay.cs" id="1_47peg"]
+[ext_resource type="Script" path="res://Scripts/DialogueDisplay.gd" id="1_47peg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47peg"]
 bg_color = Color(0.9438794, 0.3936343, 0.4346753, 1)

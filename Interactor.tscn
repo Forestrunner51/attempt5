@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://crnwabeckt1up"]
+
+[ext_resource type="Script" uid="uid://nbcayd267dif" path="res://interactor.gd" id="1_q2shh"]
+
+[node name="Interactor" type="Node3D" unique_id=1544405894]
+script = ExtResource("1_q2shh")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=71610449]
+target_position = Vector3(0, 0, -2.5)
+collide_with_areas = true

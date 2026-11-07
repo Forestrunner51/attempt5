@@ -2,14 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://Scene/Player.tscn" id="1_r34rm"]
 [ext_resource type="PackedScene" uid="uid://bylp2tvf6hcn4" path="res://Scene/floor.tscn" id="2_2wwxx"]
+[ext_resource type="PackedScene" uid="uid://crnwabeckt1up" path="res://Interactor.tscn" id="2_3amdw"]
 [ext_resource type="PackedScene" uid="uid://gy5bswmm4q68" path="res://Scene/dialoguedisplay.tscn" id="3_3amdw"]
+[ext_resource type="PackedScene" uid="uid://davmmiwrv6q5b" path="res://Scene/speaker.tscn" id="4_2wwxx"]
+[ext_resource type="PackedScene" uid="uid://crwa7ohtj2u04" path="res://NPC.tscn" id="6_1xcnr"]
+[ext_resource type="Resource" uid="uid://d18f05rna5whh" path="res://test-dialogue.tres" id="7_ow1sv"]
 
 [node name="main" type="Node3D" unique_id=920105574]
 
-[node name="Node3D" parent="." unique_id=1168422103 instance=ExtResource("1_r34rm")]
+[node name="Player" parent="." unique_id=1168422103 instance=ExtResource("1_r34rm")]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=353931402]
-transform = Transform3D(1, 0, 0, 0, 0.77153784, 0.63618344, 0, -0.63618344, 0.77153784, 0, 5.678689, 4.925832)
+[node name="Head" type="Node3D" parent="Player" unique_id=1729039542]
+transform = Transform3D(1, 0, 0, 0, 0.99082726, 0.13513453, 0, -0.13513453, 0.99082726, 0, 0.89154804, -0.48361412)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=353931402]
+
+[node name="Interactor" parent="Player/Head/Camera3D" unique_id=1544405894 instance=ExtResource("2_3amdw")]
+transform = Transform3D(1, 0, 0, 0, 0.99082726, -0.13513453, 0, 0.13513453, 0.99082726, 0, -0.9487231, 0.3586991)
 
 [node name="Node3D2" parent="." unique_id=1210243280 instance=ExtResource("2_2wwxx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7821431, 0)
@@ -18,3 +27,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7821431, 0)
 transform = Transform3D(1, 0, 0, 0, -0.18805026, 0.98215944, 0, -0.98215944, -0.18805026, 0, 4.295861, 0)
 
 [node name="DialogueDisplay" parent="." unique_id=347827361 instance=ExtResource("3_3amdw")]
+
+[node name="Speaker" parent="." unique_id=1963250593 instance=ExtResource("4_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012283325, 0, -2.4514961)
+
+[node name="NPC" parent="." unique_id=1097368574 instance=ExtResource("6_1xcnr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4520848, 0, 0)
+dialogue_resource = ExtResource("7_ow1sv")

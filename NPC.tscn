@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://crwa7ohtj2u04"]
+
+[ext_resource type="Script" uid="uid://c7psif11o5ks5" path="res://npc.gd" id="1_twre2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1ss65"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xcnr"]
+albedo_color = Color(1, 0.44705883, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1ss65"]
+material = SubResource("StandardMaterial3D_1xcnr")
+
+[node name="NPC" type="CharacterBody3D" unique_id=1097368574]
+script = ExtResource("1_twre2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1290802266]
+shape = SubResource("BoxShape3D_1ss65")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=744661645]
+mesh = SubResource("BoxMesh_1ss65")
